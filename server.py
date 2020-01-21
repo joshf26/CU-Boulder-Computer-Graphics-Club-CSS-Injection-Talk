@@ -10,13 +10,13 @@ PAGE_HTML = '''
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <title>Computer Graphics Club Forum</title>
+    <title>Computer Graphics Club Chat</title>
 </head>
 <body style="display: grid; grid-template-rows: auto 1fr auto; min-height: 100vh">
     <nav class="blue">
         <div class="nav-wrapper">
             <div class="container">
-                <span class="brand-logo">Computer Graphics Club Forum</span>
+                <span class="brand-logo">Computer Graphics Club Chat</span>
                 <ul class="right">
                     <li>
                         <button class="btn orange darken-2"
@@ -94,6 +94,7 @@ class RequestHandler(BaseHTTPRequestHandler):
 
 def main():
     print('Starting server...')
+    print('http://127.0.0.1:8000')
 
     httpd = HTTPServer(('127.0.0.1', 8000), RequestHandler)
     httpd.serve_forever()
